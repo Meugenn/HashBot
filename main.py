@@ -15,7 +15,6 @@ def chek(message):
 def kill_phrases(message):
     for word in config.bad_words:
         if word in message.text:
-
             bot.delete_message(message.chat.id, message.message_id)
             bot.kick_chat_member(message.chat.id, message.from_user.id)
 
@@ -23,4 +22,3 @@ def kill_phrases(message):
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)
-
